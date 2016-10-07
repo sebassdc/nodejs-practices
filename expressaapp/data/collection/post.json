@@ -1,0 +1,32 @@
+{
+  "_id": "post",
+  "schema": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "title": {
+        "type": "string",
+        "format": "text"
+      },
+      "body": {
+        "type": "string",
+        "format": "textarea"
+      },
+      "meta": {
+        "type": "object",
+        "additionalProperties": true,
+        "properties": {}
+      }
+    },
+    "required": [
+      "title",
+      "body"
+    ]
+  },
+  "storage": "mongodb",
+  "documentsHaveOwners": true,
+  "meta": {
+    "updated": "2016-09-01T07:09:04.342Z",
+    "created": "2016-09-01T07:09:04.341Z"
+  }
+}

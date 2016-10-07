@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html ng-app="youtube">
+	<head>
+		<meta charset="utf-8">
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
+		<script src="js/main.js"></script>
+		<title>Youtube-dl</title>
+	</head>
+	<body ng-controller="principal">
+		<div class="">
+			<ul>
+				<li ng-repeat="element in lista">
+					{{element}}  <a href="#" ng-click="removeActv(actividad)" style="color:red">x</a>
+				</li>
+			</ul>
+		<form action="index.html" method="post" ng-submit="addActv()">
+			<input ng-model="newActv" placeholder="Ingresa un enlace"></input>
+			<input type="submit" value="Add" style="background: rgb(35, 131, 200)">
+		</form>
+		<button type="button" ng-click="descargar()"></button>
+	</div>
+	</body>
+</html>

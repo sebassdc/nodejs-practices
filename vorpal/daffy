@@ -1,0 +1,50 @@
+#! /home/sebassdc/.nvm/versions/node/v5.6.0/bin/node
+
+var vorpal = require('vorpal')(),
+	contadorDePato = 0,
+	contadorWonejo = 0;
+
+//duck
+vorpal
+	.command('pato', 'Ouputs "conejo"')
+	.action(function(args, callback){
+		this.log('Wonejo');
+		callback();
+	});
+vorpal
+	.command('temporada de patos', 'Ouputs "temporada de conejos"')
+	.action(function(args, callback){
+		contadorDePato++;
+		this.log('Temporada de wonejos');
+		callback();
+	});
+// Wabbit
+vorpal
+	.command('wonejo', 'Ouputs "pato"')
+	.action(function(args, callback){
+		this.log('Pato');
+		callback();
+	});
+	vorpal
+		.command('temporada de wonejos', 'Ouputs "temporada de patos"')
+		.action(function(args, callback){
+			//no cheating
+			if(duckCount < 2){
+				duckCount = 0;
+				this.log('You\'re despicable');
+				callback();
+			}else if(wabbitCount === 0){
+				wabbitCount++;
+				this.log('Duck season');
+				callback();
+			}
+			// doh!
+			else{
+				this.log('I say it\'s duck season. And i say FIRE!!');
+				vorpal.ui.cancel();
+			}
+		});
+
+vorpal
+	.delimiter('daffy$')
+	.show();

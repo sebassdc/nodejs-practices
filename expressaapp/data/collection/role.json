@@ -1,0 +1,31 @@
+{
+  "_id": "role",
+  "schema": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "_id": {
+        "type": "string"
+      },
+      "permissions": {
+        "type": "object",
+        "additionalProperties": true,
+        "properties": {}
+      },
+      "meta": {
+        "type": "object",
+        "additionalProperties": true,
+        "properties": {}
+      }
+    },
+    "required": [
+      "permissions"
+    ]
+  },
+  "storage": "mongodb",
+  "documentsHaveOwners": false,
+  "meta": {
+    "updated": "2016-09-01T07:09:03.932Z",
+    "created": "2016-09-01T07:09:03.932Z"
+  }
+}
